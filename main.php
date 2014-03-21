@@ -10,8 +10,9 @@ elseif (isset($_GET['utm_campaign'])) {
 	$campaign_name = htmlspecialchars($_GET['utm_campaign']);
 	$expire = time()+60*60*24*30*24; //two years
 	setcookie('campaign_cookie', $campaign_name, $expire);
-	$campaign_variable = $_COOKIE['campaign_cookie'];
 	Header('Location: ' . $_SERVER['PHP_SELF']);
+	$campaign_variable = $_COOKIE['campaign_cookie'];
+	
 }
  
 
