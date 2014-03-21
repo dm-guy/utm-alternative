@@ -1,5 +1,5 @@
-utm-alternative
-===============
+utm-alternative (PHP)
+=====================
 
 Replacement for Google Analytics UTM cookies with the move to Universal Analytics (UA). Since UA does not allow to read utm cookies anymore, this project attempts to create cookies that will use the tracking variables that were declared in the URL and store them on a private cookie.
 
