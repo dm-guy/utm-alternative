@@ -25,7 +25,7 @@ elseif (isset($_GET['utm_campaign'])) {
 	<body>		
 		<form>
 			<!-- how to use $campaign_variable in your forms -->
-			<input type="hidden" id="lead_source" name="lead_source" value="<?php echo $campaign_name; ?>" />
+			<input type="hidden" id="lead_source" name="lead_source" value="<?php echo $campaign_variable; ?>" />
 		</form>
 	</body>
 </html>
