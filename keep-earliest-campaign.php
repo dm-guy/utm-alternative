@@ -27,7 +27,7 @@ if (isset($_COOKIE["campaign_cookie"]))
 
 elseif ((isset($_COOKIE["__utmz"]) && ($this->campaign_name != "")) {	
 	$campaign_name = $this->campaign_name; 
-	setcookie('campaign_cookie', $campaign_name, $expire); //currently the campaign timespan resets for two years. 
+	setcookie('campaign_cookie', $campaign_name, $expire); 
 	Header('Location: ' . $_SERVER['PHP_SELF']);
 }
 
@@ -37,7 +37,7 @@ elseif ((isset($_COOKIE["__utmz"]) && ($this->campaign_name != "")) {
  */ 
 elseif (isset($_GET['utm_campaign'])) {
 	$campaign_name = htmlspecialchars($_GET['utm_campaign']);
-	$expire = time()+60*60*24*30*24; //two years
+	setcookie('campaign_cookie', $campaign_name, $expire);
 	Header('Location: ' . $_SERVER['PHP_SELF']);	
 }
 
