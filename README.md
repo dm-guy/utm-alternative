@@ -5,4 +5,4 @@ This project aim is to provide the ability to use utm_campaign values inside the
 
 This way you can keep your old tracking parameters (utm_campaign=your-campaign-name) that are still used to for tracking purposes while using UA, but to use them for your tracking purposes (CRM, other analytics tools).
 
-Further development of this project would be to provide a full HTTP referrer data (source, medium, user visits info and etc).
+Further development of this project would be to provide a full HTTP referrer data (source, medium, user visits info and etc) that can be used for tracking purposes.
