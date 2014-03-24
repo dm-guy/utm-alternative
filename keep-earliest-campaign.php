@@ -22,7 +22,7 @@ if (isset($_COOKIE["campaign_cookie"]))
 /* 
  * If no cookie is set, it checks whether there is a campaign
  * name in the existing __UTMZ cookie and then puts it in the new 
- * cookie and in the variable
+ * cookie and in the variable. If you never used GA before, you can remove this part. 
  */
 
 elseif ((isset($_COOKIE["__utmz"]) && ($this->campaign_name != "")) {	
