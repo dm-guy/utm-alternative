@@ -102,7 +102,7 @@
             var referrerHostName = removeProtocol(document.referrer);
             var GOOGLE = /www.google/; //google?
             var YAHOO = /search.yahoo/; //yahoo?
-            var BING = /www.bing/; ..being?
+            var BING = /www.bing/; //bing?
             if(GOOGLE.test(referrerHostName)){
                 traffic_source = "Google Search";
             } else if(YAHOO.test(referrerHostName)){
