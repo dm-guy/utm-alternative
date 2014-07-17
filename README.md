@@ -13,7 +13,9 @@ How it works
 3) 
 
 Q: Why not with Local Storage but a cookie?
+
 A: Local Storage does not allow you to share data across subdomains easily (if at all). Many advertisers run different campaigns on different web assets.
 
 Q: What to do if I use the utm_campaign any way?
-A: Just add src=XXX to the target URL. You can make it identical to the utm_)ca
+
+A: Just add src=XXX to the target URL. You can make it identical to the utm_campaign
