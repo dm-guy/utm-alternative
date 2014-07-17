@@ -7,10 +7,12 @@ The SRC value
 -------------
 Since not all analytics platforms employ the utm_campaign, and since the auto-tagging of adwords enables you not to use it, a new campaign tag is suggested = "src". Each time this parameter is declared in the URL, the utm-alternative cookie takes action.
 
-How it works
+***How it works***
 1) Check whether there is an existing UTMZ cookie with a campaign info. If there is one, it saves it to the new cookie. 
+
 2) If there is also a SRC value, it adds it to the cookie (=concatenate it), unless it already exist as the recent value. 
-3) 
+
+ 
 
 Q: Why not with Local Storage but a cookie?
 
