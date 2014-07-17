@@ -7,12 +7,14 @@ The SRC value
 -------------
 Since not all analytics platforms employ the utm_campaign, and since the auto-tagging of adwords enables you not to use it, a new campaign tag is suggested = "src". Each time this parameter is declared in the URL, the utm-alternative cookie takes action.
 
-***How it works***
+***How Does the Script Work?***
+
 1) Check whether there is an existing UTMZ cookie with a campaign info. If there is one, it saves it to the new cookie. 
 
-2) If there is also a SRC value, it adds it to the cookie (=concatenate it), unless it already exist as the recent value. 
+2) If there is also a SRC value, it adds it to the cookie (=concatenate it), unless it already exist as the recent value.
 
- 
+The new lead source value should look like: 
+{src value from linkedin campaign}--{src value from adwords campaign}--{utmz campaign value}
 
 Q: Why not with Local Storage but a cookie?
 
@@ -21,3 +23,7 @@ A: Local Storage does not allow you to share data across subdomains easily (if a
 Q: What to do if I use the utm_campaign any way?
 
 A: Just add src=XXX to the target URL. You can make it identical to the utm_campaign
+
+Q: So is the UTMZ campaign value adds up each time?
+
+A: No. Once there is a new cookie of source, the script does not check for utm_campaign anymore. You can now rely on the new lead source cookie. 
