@@ -25,5 +25,5 @@ A: Just add src=XXX to the target URL. You can make it identical to the utm_camp
 Q: So is the UTMZ campaign value adds up each time?<br />
 A: No. Once there is a new cookie of source, the script does not check for utm_campaign anymore. You can now rely on the new lead source cookie. 
 
-<h5>Contribute!</h5>
+<h5>Please Contribute!</h5>
 This project needs more use cases, testing and suggestions to improve it. Please do!
