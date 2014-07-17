@@ -7,6 +7,7 @@ The SRC value
 -------------
 Since not all analytics platforms employ the utm_campaign, and since the auto-tagging of adwords enables you not to use it, a new campaign tag is suggested = "src". Each time this parameter is declared in the URL, the utm-alternative cookie takes action.
 
+<h3>asdasd</h3>
 ***How Does the Script Work?***
 
 1) Check whether there is an existing UTMZ cookie with a campaign info. If there is one, it saves it to the new cookie. 
