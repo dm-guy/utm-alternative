@@ -16,6 +16,8 @@ Since not all analytics platforms employ the utm_campaign, and since the auto-ta
 The new lead source value should look like: 
 {src value from linkedin campaign}--{src value from adwords campaign}--{utmz campaign value}
 
+***FAQ***
+
 Q: Why not with Local Storage but a cookie?
 
 A: Local Storage does not allow you to share data across subdomains easily (if at all). Many advertisers run different campaigns on different web assets.
