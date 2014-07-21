@@ -100,9 +100,9 @@
             traffic_source = decodeURI(urlParamSRC); // decode URI of the SRC parameter
         } else if(document.referrer != ""){ //if there is not campaign, and no src, check if there is a referrer,
             var referrerHostName = removeProtocol(document.referrer);
-            var GOOGLE = /www.google/; //google?
-            var YAHOO = /search.yahoo/; //yahoo?
-            var BING = /www.bing/; //bing?
+            var GOOGLE = /www.google/; 
+            var YAHOO = /search.yahoo/; 
+            var BING = /www.bing/; 
             if(GOOGLE.test(referrerHostName)){
                 traffic_source = "Google Search";
             } else if(YAHOO.test(referrerHostName)){
@@ -115,7 +115,7 @@
         } else {
             traffic_source = NONE;
         }
-        setCookie("traffic_source", traffic_source); //build the cookie
+        setCookie("traffic_source", traffic_source); //set the cookie
 		
     } else if(isNotNullOrEmpty(urlParamSRC)){ //if there is a cookie, add the SRC to the cookie, unless the same src already exists
         var firstToken = getFirstTokenFromCookie(getCookie("traffic_source"));
