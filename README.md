@@ -7,7 +7,7 @@ Since not all analytics platforms employ the utm_campaign, and since the auto-ta
 
 <h3>How Does the Script Work?</h3>
 
-1) First, checks whether there is an existing UTMZ cookie with a campaign info. If there is one, it saves it to the new cookie.
+1) First, checks whether there is an existing UTMZ cookie with a campaign info. If there is one, it saves it to the new cookie - "traffic_source".
 
 2) If there is also a SRC value, it adds it to the cookie (=concatenate it), unless it already exist as the recent value.
 
