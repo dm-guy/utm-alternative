@@ -89,7 +89,7 @@
                 if(end === -1) {
                     end = utmzCookie.length; 
                 }
-                cookieCampaignName = utmzCookie.substring((start + UTMSRC.length), end); //get the value of the UTMZ, without the parameter name
+                cookieCampaignName = "utmz:" + utmzCookie.substring((start + UTMSRC.length), end); //get the value of the UTMZ, without the parameter name
             }
         }
         if(cookieCampaignName != "" && isNotNullOrEmpty(urlParamSRC)){ //if there is a campaign name AND there is SRC value
