@@ -17,6 +17,7 @@ Since not all analytics platforms employ the utm_campaign, and since the auto-ta
 
 An example of how the traffic source value should look like: 
 {src value from linkedin campaign}--{src value from adwords campaign}--{utmz campaign value}
+(Double dash being the separator of the values)
 
 <h4>FAQ</h4>
 
