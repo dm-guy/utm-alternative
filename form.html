@@ -1,0 +1,20 @@
+<form name="myform" action="{your-action}">
+		<input type="hidden" name="lead_source" value="" /> <!-- Typical salesforce form -->
+		<input type="submit" name="submit" />
+		</form>
+		
+		
+<script>
+		function getCookie(name) { //Gets the value of traffic_source 
+  		var value = "; " + document.cookie;
+  		var parts = value.split("; " + name + "=");
+  		if (parts.length == 2) return parts.pop().split(";").shift();
+		}
+		
+		function addLeadSourceToForm(){  //injects the traffic_source value to the form
+		document.myform.lead_source.value = getCookie("traffic_source");
+		}
+		
+		addLeadSourceToForm() //initates the process
+		
+</script>
