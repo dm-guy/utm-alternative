@@ -1,6 +1,6 @@
 <h1>utm-alternative</h1>
 
-This project aim is to provide the ability to use utm_campaign values inside the DOM (such as in forms), as replacement for Google Analytics UTM cookies with the move to Universal Analytics (UA). Since UA does not use utm cookies and fetch values from them, this project attempts to 1) create cookies that will use the tracking variable that was declared in the URL using query string parameters and store them on a new first-party cookie; 2) import existing UTM campaign variables to the new cookie so old campaign data won't be lost. 
+This new project aim is to provide the ability to use utm_campaign values inside the DOM (such as in forms), as replacement for Google Analytics UTM cookies with the move to Universal Analytics (UA). Since UA does not use utm cookies and fetch values from them, this project attempts to 1) create cookies that will use the tracking variable that was declared in the URL using query string parameters and store them on a new first-party cookie; 2) import existing UTM campaign variables to the new cookie so old campaign data won't be lost. 
 
 <h2>The SRC value</h2>
 Since not all analytics platforms employ the utm_campaign, and since the auto-tagging of adwords enables you to omit it, a new campaign tag is suggested = "src". Each time this parameter is declared in the URL, the utm-alternative cookie takes action.
@@ -33,4 +33,4 @@ Q: So is the UTMZ campaign value adds up to the cookie each time the user enters
 A: No. Once there is a new cookie of traffic traffic, the script does not check for utm_campaign anymore. You can now rely on the new lead source cookie. 
 
 <h5>Please Contribute!</h5>
-This project needs more use cases, testing and suggestions to improve it. Please do!
+This project is very new and needs more use cases, testing and suggestions to improve it. Please do!
