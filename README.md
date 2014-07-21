@@ -23,8 +23,8 @@ An example of how the traffic source value should look like:
 Q: Why not with Local Storage but a cookie?<br />
 A: Local Storage does not allow you to share data across subdomains easily (if at all). Many advertisers run different campaigns on different web assets.
 
-Q: Why Javascript
-A: So as to make cross-platform, server-side agnostic solution. 
+Q: Why Javascript?
+A: Cross-platform, server-side agnostic solution. 
 
 Q: What to do if I use the utm_campaign any way and I don't use auto-tagging?<br />
 A: From now on just add src=XXX to the target URL. You can make it identical to the utm_campaign so you keep track of your campaigns easily.
