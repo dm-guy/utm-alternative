@@ -1,6 +1,6 @@
 <h1>utm-alternative</h1>
 
-This new project aim is to provide the ability to use utm_campaign values inside the DOM (such as in forms), as replacement for Google Analytics UTM cookies with the move to Universal Analytics (UA). Since UA does not use utm cookies and fetch values from them, this project attempts to 1) create cookies that will use the tracking variable that was declared in the URL using query string parameters and store them on a new first-party cookie; 2) import existing UTM campaign variables to the new cookie so old campaign data won't be lost. 
+This new project aim is to provide the ability to use campaign data values inside the DOM (such as in forms). Many of us in the past added campaign data to our CRM (such as Salesforce) with Google Analytics UTMZ cookies, but with the move to Universal Analytics (UA), it's not possible to fetch values anymore. Since Universal Analytics does not store campaign data in a cookie anymore, we are enable to get this data. This project then 1) creates a new cookie, "traffic_source", which tracks the campaign data based on a fixed query string parameter, SRC (read more below) 2) Stores the existing UTM campaign variables so old campaign data won't be lost.
 
 <h2>The SRC value</h2>
 Since not all analytics platforms employ the utm_campaign, and since the auto-tagging of adwords enables you to omit it, a new campaign tag is suggested = "src". Each time this parameter is declared in the URL, the utm-alternative cookie takes action.
@@ -16,7 +16,9 @@ Since not all analytics platforms employ the utm_campaign, and since the auto-ta
 4) Otherwise, put NONE (strictly speaking, we cannot know for sure it's "direct" traffic). 
 
 An example of how the traffic source value should look like: 
+<pre>
 {src value from linkedin campaign}--{src value from adwords campaign}--{utmz campaign value}
+</pre>
 (Double dash being the separator of the values)
 
 <h4>FAQ</h4>
@@ -32,6 +34,9 @@ A: From now on just add src=XXX to the target URL. You can make it identical to 
 
 Q: So is the UTMZ campaign value adds up to the cookie each time the user enters the site?<br />
 A: No. Once there is a new cookie of traffic traffic, the script does not check for utm_campaign anymore. You can now rely on the new lead source cookie. 
+
+Q: Do I must use Google Analytics?<br />
+A: The script works independently, but its benefit in its design enables you to import existing campaign variables into 
 
 <h5>Please Contribute!</h5>
 This project is very new and needs more use cases, testing and suggestions to improve it. Please do!
