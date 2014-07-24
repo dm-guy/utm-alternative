@@ -34,7 +34,7 @@ The main javascript could be loaded in the head section, after the body tag, or 
 Q: Why not with Local Storage but a cookie?<br />
 A: Local Storage does not allow you to share data across subdomains easily (if at all). Many advertisers run different campaigns on different web assets.
 
-Q: Why Javascript?
+Q: Why Javascript?<br />
 A: Cross-platform, server-side agnostic solution. 
 
 Q: What to do if I use the utm_campaign any way and I don't use auto-tagging?<br />
