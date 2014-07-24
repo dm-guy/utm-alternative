@@ -21,6 +21,14 @@ An example of how the traffic source value should look like:
 </pre>
 (Double dash being the separator of the values)
 
+<h3>Installation</h3>
+
+The main javascript could be loaded in the <head>, after the <body> or via GoogleTagManager. 
+1) If you run traffic_source.js in the <head>, the JS code that prints the value in the form (hereafter: form.html) should run after the <body> tag. <br />
+2) If after <body>, the traffic_source.js should run before form.html.<br />
+3) If via GoogleTagManager, you must make sure that traffic_source.js runs before form.html. You can do that by putting bost codes in one tag, one after the other. 
+
+
 <h4>FAQ</h4>
 
 Q: Why not with Local Storage but a cookie?<br />
