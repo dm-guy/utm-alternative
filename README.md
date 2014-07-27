@@ -48,4 +48,4 @@ A: The script works independently, so Google Analytics is not required. You can 
 
 
 <h5>Please Contribute!</h5>
-This project is very new and needs more use cases, testing and suggestions to improve it. Please do!
+This project is completely functional and working. However, it needs more use cases, testing and suggestions to improve it. Please do!
