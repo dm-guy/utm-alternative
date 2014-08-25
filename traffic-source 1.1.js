@@ -17,7 +17,7 @@
 
 /*
 *  Takes the current time of the session, and optional addition to the traffic source. 
-*  The output will be of the format: --{traffic source} (DD-MM-YY HH:MM)--
+*  The output will be of the format: --{traffic source} (DD-MM-YY HH:MM AM/PM)--
 *
 */
 
