@@ -23,10 +23,16 @@ An example of how the traffic source value should look like:
 
 <h3>Installation</h3>
 
+
+First, find YOURDOMAIN.com in the code and replace it with your own domain. 
+
+Loading the Javascript:
 The main javascript could be loaded in the head section, after the body tag, or via GoogleTagManager. <br />
 1) If you run traffic_source.js in the head, the JS code that prints the value in the form (hereafter: form.html) should run after the body tag. <br />
 2) If you run all JS after body tag, the traffic_source.js should run before form.html.<br />
 3) If via GoogleTagManager, you must make sure that traffic_source.js runs before form.html. You can do that by putting both piece of codes in one tag, one after the other. 
+
+
 
 
 <h4>FAQ</h4>
