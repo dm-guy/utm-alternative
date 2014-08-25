@@ -1,5 +1,4 @@
 (function(){
-    "use strict"
 
     var traffic_source_COOKIE_TOKEN_SEPARATOR = "--"; //separating between concatenated lead source
     var NONE = "(none)";
@@ -15,6 +14,27 @@
         }
         return null;
     }
+
+/*
+*  Takes the current time of the session, and optional addition to the traffic source. 
+*
+*/
+
+	function currTime() {
+	    var date = new Date();
+	    var currDate = date.getDate();
+	    var hours = date.getHours();
+	    var minutes = date.getMinutes();
+	    var month = date.getMonth();
+	    var year = date.getFullYear();
+	    var ampm = hours >= 12 ? 'pm' : 'am';
+	    hours = hours % 12;
+	    hours = hours ? hours : 12; // the hour '0' should be '12'
+	    minutes = minutes < 10 ? '0' + minutes : minutes;
+	    var strTime = '(' + currDate + '-' + month + '-' + year + ' ' + hours + ':' + minutes + ' ' + ampm + ')';
+	    return strTime;
+	}
+	
 
 	/*
        Checks whether a certain parameter exist in the current browser URL. If it does, it returns its name. 
@@ -51,7 +71,7 @@
     function setCookie(cookie, value){
         var expires = new Date();
         expires.setTime(expires.getTime() + 62208000000); //1000*60*60*24*30*24 (2 years)
-        document.cookie = cookie + "=" + value + "; expires=" + expires.toGMTString() + "; domain=.backbase.com; path=/";
+        document.cookie = cookie + "=" + value + "; expires=" + expires.toGMTString() + "; domain=.YOURDOMAIN.com; path=/";
     }
 	
 	/*
@@ -94,10 +114,12 @@
         }
         if(cookieCampaignName != "" && isNotNullOrEmpty(urlParamSRC)){ //if there is a campaign name AND there is SRC value
              traffic_source = urlParamSRC + traffic_source_COOKIE_TOKEN_SEPARATOR + cookieCampaignName; //concateane the SRC with the existing campaign name
+             // traffic_source = urlParamSRC + currTime() + traffic_source_COOKIE_TOKEN_SEPARATOR + cookieCampaignName; // Optional: add the session time
         } else if(cookieCampaignName != ""){ //if there is campaign name
              traffic_source = cookieCampaignName;  //just use it for the new cookie
         } else if(urlParamSRC != null) { //if there is not campaign name but we have SRC
             traffic_source = decodeURI(urlParamSRC); // decode URI of the SRC parameter
+            // traffic_source = decodeURI(urlParamSRC) + currTime(); //  Optional: add the session time
         } else if(document.referrer != ""){ //if there is not campaign, and no src, check if there is a referrer,
             var referrerHostName = removeProtocol(document.referrer);
             var GOOGLE = /www.google/; 
@@ -105,23 +127,28 @@
             var BING = /www.bing/; 
             if(GOOGLE.test(referrerHostName)){
                 traffic_source = "Google Search";
+                //traffic_source = "Google Search" + currTime(); // + Optional: Add the current session time. Choose one of them.
             } else if(YAHOO.test(referrerHostName)){
                 traffic_source = "Yahoo Search";
+                //traffic_source = "Yahoo Search" + currTime();
             } else if(BING.test(referrerHostName)){
                 traffic_source = "Bing Search";
+                //traffic_source = "Bing Search" + currTime();
             } else {
                 traffic_source = referrerHostName;
+                //traffic_source = referrerHostName + currTime();
             }
         } else {
             traffic_source = NONE;
         }
         setCookie("traffic_source", traffic_source); //set the cookie
 		
-    } else if(isNotNullOrEmpty(urlParamSRC)){ //if there is a cookie, add the SRC to the cookie, unless the same src already exists
+    } else if(isNotNullOrEmpty(urlParamSRC)){ //if there is a cookie, add the SRC to the cookie, unless the same src already exists as the first token.
         var firstToken = getFirstTokenFromCookie(getCookie("traffic_source"));
         if(firstToken !== "" && urlParamSRC !== firstToken) {
-            var newLeadSourceCookie = urlParamSRC + traffic_source_COOKIE_TOKEN_SEPARATOR + getCookie("traffic_source");
-            setCookie("traffic_source", newLeadSourceCookie);
+            var newTrafficSourceCookie = urlParamSRC + traffic_source_COOKIE_TOKEN_SEPARATOR + getCookie("traffic_source"); //concetenate new SRC with old cookie values
+            // var newTrafficSourceCookie = urlParamSRC + currTime() + traffic_source_COOKIE_TOKEN_SEPARATOR + getCookie("traffic_source"); // Optional: add the time of current session
+            setCookie("traffic_source", newTrafficSourceCookie);
         }
     }
 
