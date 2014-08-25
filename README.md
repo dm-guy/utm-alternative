@@ -58,5 +58,5 @@ This project is completely functional and working. However, it needs more use ca
 
 <h6>Updates</h6>
 
-Aug 25<br />
+Aug 25 2014<br />
 <b>Release 1.1:</b> New currTime() function gives you an option to add the time of the session to the traffic source cookie. By default, these lines are commented out. 
