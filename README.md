@@ -55,3 +55,8 @@ A: The script works independently, so Google Analytics is not required. You can 
 
 <h5>Please Contribute!</h5>
 This project is completely functional and working. However, it needs more use cases, testing and suggestions to improve it. Please do!
+
+<h6>Updates</h6>
+
+Aug 25 1.1
+New currTime() functions gives you an option to add the time of the session to the traffic source cookie. By default, these lines are commented out. 
