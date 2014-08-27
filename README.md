@@ -1,6 +1,6 @@
 <h1>utm-alternative</h1>
 
-This new project aim is to provide the ability to use campaign data values inside the DOM (such as in forms). Many of us in the past added campaign data to our CRM (such as Salesforce) with Google Analytics UTMZ cookies, but with the move to Universal Analytics (UA), it's not possible to fetch values anymore, since Universal Analytics script does not store campaign data on a cookie. This project then 1) creates a new cookie, "traffic_source", which tracks the campaign data based on a fixed query string parameter, SRC (read more below) 2) Stores the existing UTMZ campaign variables so old campaign data won't be lost.
+This new project aim is to provide the ability to use campaign data values inside the DOM (such as in forms). Many of us in the past added campaign data to our CRM (such as Salesforce) with Google Analytics UTMZ cookies, but with the move to Universal Analytics (UA), it's not possible to retrieve UTMZ cookie values anymore, since Universal Analytics script does not store campaign data on a cookie. This project then 1) creates a new cookie, "traffic_source", which tracks the campaign data based on a fixed query string parameter, SRC (read more below) 2) Stores the existing UTMZ campaign value of returning users so old campaign data won't be lost.
 
 <h2>The SRC value</h2>
 Since not all analytics platforms employ the utm_campaign query string paraemter, and since the auto-tagging of adwords enables you to omit it, the most efficient way to track campaign is by using a new campaign query string paremeter: "src". Each time this parameter is declared in the URL, the utm-alternative cookie takes action.
@@ -69,4 +69,4 @@ Aug 25 2014<br />
 <b>Release 1.1:</b> New currTime() function gives you an option to add the time of the session to the traffic source cookie. By default, these lines are commented out. 
 
 Aug 15 2014 <br/>
-Add "utmz:" string before the old UTMZ campaign value (that was taken from the existing UTMZ cookie of the user) 
+Add "utmz:" string before the old UTMZ campaign value (that was retrieved from the existing UTMZ cookie of the user).
