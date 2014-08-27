@@ -11,10 +11,10 @@
   		if (parts.length == 2) return parts.pop().split(";").shift();
 		}
 		
-		function addLeadSourceToForm(){  //injects the traffic_source value to the form
+		function addTrafficSourceToForm(){  //injects the traffic_source value to the form
 		document.myform.lead_source.value = getCookie("traffic_source");
 		}
 		
-		addLeadSourceToForm() //initates the process
+		addTrafficSourceToForm() //initates the process
 		
 </script>
