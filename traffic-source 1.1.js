@@ -21,6 +21,10 @@
 *
 */
 
+/*
+*   Uncomment currTime() in order to activate. You should also uncomment the lines in the code that call this function (all marked with a comment). If you do so, uncomment the line above them which does not employ currTime()
+
+
 	function currTime() {
 	    var date = new Date();
 	    var currDate = date.getDate();
@@ -35,7 +39,8 @@
 	    var strTime = '(' + currDate + '-' + month + '-' + year + ' ' + hours + ':' + minutes + ' ' + ampm + ')';
 	    return strTime;
 	}
-	
+
+*/
 
 	/*
        Checks whether a certain parameter exist in the current browser URL. If it does, it returns its name. 
