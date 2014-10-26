@@ -19,7 +19,7 @@ An example of how the traffic source value should look like:
 <pre>
 {src value from linkedin campaign}--{src value from adwords campaign}--{utmz campaign value}
 </pre>
-(Double dash being the separator of the values)
+(-- Double dash is the separator of the values)
 
 As of version 1.1, you can add the time of session. Each source value will be concatenated with the date in the format:
 <pre>
