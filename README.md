@@ -11,7 +11,7 @@ Since not all analytics platforms employ the utm_campaign query string paraemter
 
 2) If there is also a SRC value, it adds it to the cookie (=concatenate it), unless it already exists as the recent value. This way you can track your campaigns effect over time. 
 
-3) If there is neither, the script looks at the HTTP referrer, to see if it came from Google, Bing or Yahoo. If it does, it adds it to the cookie. 
+3) If there is neither, the script looks at the HTTP referrer, to see if it came from Google, Bing or Yahoo. If it does, it adds it to the cookie. If none of the search engine, it will add the exact referring path (www.example.com/page.html)
 
 4) Otherwise, put NONE (strictly speaking, we cannot know for sure it's "direct" traffic). 
 
