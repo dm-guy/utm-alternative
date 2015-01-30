@@ -7,7 +7,7 @@ Since not all analytics platforms employ the utm_campaign query string paraemter
 
 <h3>How Does the Script Work?</h3>
 
-1) First, checks whether there is an existing UTMZ cookie with a campaign info. If there is one, it saves it to the new cookie - "traffic_source".
+1) First, checks whether there is an existing UTMZ cookie with a campaign info. If there is one, it saves it to the new cookie - "traffic_source". (This name can be changed to something else)
 
 2) If there is also a SRC value, it adds it to the cookie (=concatenate it), unless it already exists as the recent value. This way you can track your campaigns effect over time. 
 
@@ -31,7 +31,7 @@ To activate it, you will need to uncomment the function and some lines in the co
 <h3>Installation</h3>
 
 
-First, find YOURDOMAIN.com in the code and replace it with your own domain. 
+Pass your domain name (in the format: .YOURDOMAIN.com) in the closure of the function. You can also change the default cookie name "traffic_source" to something else if you would like to. 
 
 Loading the Javascript:
 The main javascript could be loaded in the head section, after the body tag, or via GoogleTagManager. <br />
@@ -64,6 +64,9 @@ A: The script works independently, so Google Analytics is not required. You can 
 This project is completely functional and working. However, it needs more use cases, testing and suggestions to improve it. Please do!
 
 <h6>Updates</h6>
+
+JAN 30 2014<br/>
+Domain and cookie name values are passed to the function. If no domain name is passed, the function will take by default the hostname (-->including the subdomain). 
 
 Aug 25 2014<br />
 <b>Release 1.1:</b> New currTime() function gives you an option to add the time of the session to the traffic source cookie. By default, these lines are commented out. 
