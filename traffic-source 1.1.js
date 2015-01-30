@@ -1,7 +1,9 @@
-(function(){
+(function(cookieName, domain){
 
     var traffic_source_COOKIE_TOKEN_SEPARATOR = "--"; //separating between concatenated lead source
     var NONE = "(none)";
+
+    domain = domain || window.location.hostname;
 
     function getCookie(cookieName){
         var name = cookieName + "=";
@@ -77,7 +79,7 @@
     function setCookie(cookie, value){
         var expires = new Date();
         expires.setTime(expires.getTime() + 62208000000); //1000*60*60*24*30*24 (2 years)
-        document.cookie = cookie + "=" + value + "; expires=" + expires.toGMTString() + "; domain=.YOURDOMAIN.com; path=/";
+        document.cookie = cookie + "=" + value + "; expires=" + expires.toGMTString() + "; domain=" + domain + "; path=/";
     }
 	
 	/*
@@ -103,7 +105,7 @@
     */
 
     var urlParamSRC = getURLParameter("src"); //take the SRC value
-    if(document.cookie.indexOf("traffic_source") === -1) { // if there is no cookie traffic_source set yet, check if there is an existing UTMZ campaign name.
+    if(document.cookie.indexOf(cookieName) === -1) { // if there is no cookie traffic_source set yet, check if there is an existing UTMZ campaign name.
         var traffic_source = ""; //reset lead source value
         var utmzCookie = getCookie("__utmz"); //get GA cookie
         var cookieCampaignName = "";  //reset lead source value
@@ -147,15 +149,15 @@
         } else {
             traffic_source = NONE;
         }
-        setCookie("traffic_source", traffic_source); //set the cookie
+        setCookie(cookieName, traffic_source); //set the cookie
 		
     } else if(isNotNullOrEmpty(urlParamSRC)){ //if there is a cookie, add the SRC to the cookie, unless the same src already exists as the first token.
-        var firstToken = getFirstTokenFromCookie(getCookie("traffic_source"));
+        var firstToken = getFirstTokenFromCookie(getCookie(cookieName));
         if(firstToken !== "" && urlParamSRC !== firstToken) {
-            var newTrafficSourceCookie = urlParamSRC + traffic_source_COOKIE_TOKEN_SEPARATOR + getCookie("traffic_source"); //concetenate new SRC with old cookie values
-            // var newTrafficSourceCookie = urlParamSRC + currTime() + traffic_source_COOKIE_TOKEN_SEPARATOR + getCookie("traffic_source"); // Optional: add the time of current session
-            setCookie("traffic_source", newTrafficSourceCookie);
+            var newTrafficSourceCookie = urlParamSRC + traffic_source_COOKIE_TOKEN_SEPARATOR + getCookie(cookieName); //concetenate new SRC with old cookie values
+            // var newTrafficSourceCookie = urlParamSRC + currTime() + traffic_source_COOKIE_TOKEN_SEPARATOR + getCookie(cookieName); // Optional: add the time of current session
+            setCookie(cookieName, newTrafficSourceCookie);
         }
     }
 
- })();
+ })("traffic_source", "DOMAIN.COM");
