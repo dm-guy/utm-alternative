@@ -65,7 +65,7 @@ This project is completely functional and working. However, it needs more use ca
 
 <h6>Updates</h6>
 
-JAN 30 2014<br/>
+JAN 30 2015<br/>
 -Domain and cookie name values are passed to the function. If no domain name is passed, the function will take by default the hostname (-->including the subdomain). Thanks caiorogerio. <br />
 -Small fix of currTime() function. 
 
