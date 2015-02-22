@@ -1,6 +1,7 @@
 (function(cookieName, domain){
 
-    var traffic_source_COOKIE_TOKEN_SEPARATOR = "--"; //separating between concatenated lead source
+    var traffic_source_COOKIE_TOKEN_SEPARATOR = ">>"; //separating between concatenated lead source
+    var traffic_source_date_SEPARATOR = "|>"
     var NONE = "(none)";
 
     domain = domain || window.location.hostname;
@@ -19,7 +20,7 @@
 
 /*
 *  Takes the current time of the session, and optional addition to the traffic source. 
-*  The output will be of the format: --{traffic source} (DD-MM-YY HH:MM AM/PM)--
+*  The output will be of the format: >>{traffic source} |DD-MM-YY HH:MM AM/PM>>
 *
 */
 
@@ -36,9 +37,9 @@
 	    var year = date.getFullYear();
 	    var ampm = hours >= 12 ? 'pm' : 'am';
 	    hours = hours % 12;
-	    hours = hours ? hours : 12; // the hour '0' should be '12'
+	    hours = hours ? hours : 12; // the hour '0' makes '12'
 	    minutes = minutes < 10 ? '0' + minutes : minutes;
-	    var strTime = '(' + currDate + '-' + month + '-' + year + ' ' + hours + ':' + minutes + ' ' + ampm + ')';
+	    var strTime = traffic_source_date_SEPARATOR + currDate + '-' + month + '-' + year + ' ' + hours + ':' + minutes + ' ' + ampm + ')';
 	    return strTime;
 	}
 
@@ -62,7 +63,7 @@
     }
 
 	/*
-       Gets the first (latest) token from a cookie: THIS__ONE--NOT__THIS__ONE--AND__NOT__THIS__ONE
+       Gets the first (latest) token from a cookie: THIS__ONE>>NOT__THIS__ONE>>AND__NOT__THIS__ONE
     */
 	
     function getFirstTokenFromCookie(cookie){
@@ -101,7 +102,7 @@
        Find lead source by checking cookie, url param "src" or referrer(that order) and set new cookie traffic_source.
        Do this only if cookie do not exist. This value will be used for contact form.
        If cookie exist add url "src" param on the beginning of the cookie if it exists and it is not already at the beginning of the cookie.
-       This way "tokens" are made in traffic_source cookie. Token separator is "--" (see above traffic_source_COOKIE_TOKEN_SEPARATOR)
+       This way "tokens" are made in traffic_source cookie. Token separator is ">>" (see above traffic_source_COOKIE_TOKEN_SEPARATOR)
     */
 
     var urlParamSRC = getURLParameter("src"); //take the SRC value
