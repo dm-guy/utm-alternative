@@ -17,13 +17,13 @@ Since not all analytics platforms employ the utm_campaign query string paraemter
 
 An example of how the traffic source value should look like: 
 <pre>
-{src value from linkedin campaign}--{src value from adwords campaign}--{utmz campaign value}
+{src value from linkedin campaign}>>{src value from adwords campaign}>>{utmz campaign value}
 </pre>
-(-- Double dash is the separator of the values)
+(>> Double arrow is the separator of the values)
 
 As of version 1.1, you can add the time of session. Each source value will be concatenated with the date in the format:
 <pre>
---{traffic source} (DD-MM-YY HH:MM AM/PM)--
+>>{traffic source}|>DD-MM-YY HH:MM AM/PM)>>
 </pre>
 To activate it, you will need to uncomment the function and some lines in the code (instructions are within). If you do not wish to activate it, no other steps are required in order to use the code. 
 
@@ -64,6 +64,9 @@ A: The script works independently, so Google Analytics is not required. You can 
 This project is completely functional and working. However, it needs more use cases, testing and suggestions to improve it. Please do!
 
 <h6>Updates</h6>
+
+FEB 22 2015<br/>
+Change separators for easier data analysis.
 
 JAN 30 2015<br/>
 -Domain and cookie name values are passed to the function. If no domain name is passed, the function will take by default the hostname (-->including the subdomain). Thanks caiorogerio. <br />
