@@ -23,7 +23,7 @@ An example of how the traffic source value should look like:
 
 As of version 1.1, you can add the time of session. Each source value will be concatenated with the date in the format:
 <pre>
->>{traffic source}|>DD-MM-YY HH:MM AM/PM)>>
+>>{traffic source}|>DD-MM-YY HH:MM AM/PM>>
 </pre>
 To activate it, you will need to uncomment the function and some lines in the code (instructions are within). If you do not wish to activate it, no other steps are required in order to use the code. 
 
