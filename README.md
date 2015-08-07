@@ -51,7 +51,7 @@ Q: Why Javascript?<br />
 A: Cross-platform, server-side agnostic solution. 
 
 Q: What to do if I use the utm_campaign any way and I don't use Adwords auto-tagging?<br />
-A: From now on just add src=XXX to the target URL. You can make it identical to the utm_campaign so you keep track of your campaigns easily. The ability to rely on the utm_campaign query string parameter alone was considered, however to keep it flexible and to adjust to different implementations of different users, a new parameter was created. Nevertheless, if this use case will be more popular, an additional version that employs (or at least gives the option to rely on) the utm_campaign instead  will be created. 
+A: From now on just add src=XXX to the target URL. You can make it identical to the utm_campaign so you keep track of your campaigns easily. The ability to rely on the utm_campaign query string parameter alone was considered, however to keep it flexible and to adjust to different implementations of different users, a new parameter was created. Nevertheless, if this use case will be more popular, an additional version that employs (or at least gives the option to rely on) the utm_campaign instead  will be created. Read "Tagging URLs" file for more information on using the plugin. 
 
 Q: So is the UTMZ campaign value adds up to the cookie each time the user enters the site?<br />
 A: No. Once there is a new "traffic_source" cookie, the script does not check for utm_campaign anymore. You can now rely on the new traffic_source cookie. 
@@ -64,6 +64,9 @@ A: The script works independently, so Google Analytics is not required. You can 
 This project is completely functional and working. However, it needs more use cases, testing and suggestions to improve it. Please do!
 
 <h6>Updates</h6>
+
+AUG 07 2015<br />
+Added notes for implementation "Tagging URLs.md"
 
 FEB 22 2015<br/>
 Change separators for easier data analysis.
