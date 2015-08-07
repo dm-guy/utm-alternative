@@ -3,14 +3,14 @@ Below are some suggestions on how to use the plugin:
 <h2>Adwords</h2>
 With the new Upgraded URLs of Adwords (July 2015), it is very easy to implement utm-alternative. What you should do is add to the "URL options" the query string parameter with the value. 
 For example, if you want to pass the keyword, then you should add the following to the tracking template, that starts with AdWords constant string ("aw") so you can know the source of the traffic, and then follows by the keyword that triggered the ad: 
-<pre>{lpurl}?src=aw-{keyword}</pre>. If you want to add to the campaign id, you can use: <pre>{lpurl}?src={campaignid}</pre>. If using remarketing, and want this data directly in the CRM, then you can use: <pre>{lpurl}?src={campaignid}-remarketing</pre>. You can theoretically add any value you want, but don't forget to adhere to your privacy statement.
+<pre>{lpurl}?src=aw-{keyword}</pre>If you want to add to the campaign id, you can use: <pre>{lpurl}?src={campaignid}</pre>. If using remarketing and want this data directly in the CRM, then you can use: <pre>{lpurl}?src={campaignid}-remarketing</pre>You can theoretically add any value you want, but don't forget to adhere to your privacy statement.
 
 You can find all the parameters of adwords here: https://support.google.com/adwords/answer/2375447?hl=en
 
 <h2>Linkedin and others</h2>
-With linkedin and other platform, you will have to tag your target URLs manually, therefore you can easily add the src parameter in the following way:<pre>www.example.com/?utm_source=Linkedin&utm_medium=cpc&utm_content=XXX&utm_campaign=YOURCAMPAIGN&src=YOURCAMPAIGN</pre>. 
+With linkedin and other platform, you will have to tag your target URLs manually, therefore you can easily add the src parameter in the following way:<pre>www.example.com/?utm_source=Linkedin&utm_medium=cpc&utm_content=XXX&utm_campaign=YOURCAMPAIGN&src=YOURCAMPAIGN</pre>
 
-What you can also do, that will add value to your tracking, is to add ad creative to the src (the utm_campaign stays intact):<pre>www.example.com/?utm_source=Linkedin&utm_medium=cpc&utm_content=XXX&utm_campaign=YOURCAMPAIGN&src=YOURCAMPAIGN<b>-01</b></pre>. 
+What you can also do, that will add value to your tracking, is to add ad creative to the src (the utm_campaign stays intact):<pre>www.example.com/?utm_source=Linkedin&utm_medium=cpc&utm_content=XXX&utm_campaign=YOURCAMPAIGN&src=YOURCAMPAIGN<b>-01</b></pre>
 You can always see which ads generated conversions on google analytics, but in simple implementations og Analytics you cannot associate it with specific users, since GA data is anonymous. This approach will help you to do that. But note that it is hard to manage when you have a lot of ads - you have to keep track on creatives and their numbers. You can also add the whole ad content to the src if you would like. 
 
 <h2>Navigation inside the site</h2>
