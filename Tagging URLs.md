@@ -1,9 +1,9 @@
 Below are some suggestions on how to use the plugin:
 
 <h2>Adwords</h2>
-With the new Upgraded URLs of Adwords (July 2015), it is very easy to implement utm-alternative. What you should do is add to the "URL options" the query string parameter with the value. 
-For example, if you want to pass the keyword, then you should add the following to the tracking template, that starts with AdWords constant string ("aw") so you can know the source of the traffic, and then follows by the keyword that triggered the ad: 
-<pre>{lpurl}?src=aw-{keyword}</pre>If you want to add to the campaign id, you can use: <pre>{lpurl}?src={campaignid}</pre>. If using remarketing and want this data directly in the CRM, then you can use: <pre>{lpurl}?src={campaignid}-remarketing</pre>You can theoretically add any value you want, but don't forget to adhere to your privacy statement.
+With the new Upgraded URLs of Adwords (July 2015), it is very easy to implement utm-alternative. What you should do is add to the src value to the "URL options". For example, if you want the new cookie to have the keyword that triggered the ad, then I suggest the following: 
+<pre>{lpurl}?src=aw-{keyword}</pre> The aw tells you this lead came from an Adwords campaign, followed by the keyword that is generated automatically.
+If you want to add to the campaign id of Adwords, you can use: <pre>{lpurl}?src={campaignid}</pre> If using remarketing and want this data directly in the lead source, then you can use: <pre>{lpurl}?src={campaignid}-remarketing</pre>You can theoretically add any value you want (and remember to adhere to your privacy statement).
 
 You can find all the parameters of adwords here: https://support.google.com/adwords/answer/2375447?hl=en
 
