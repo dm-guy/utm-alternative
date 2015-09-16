@@ -1,7 +1,7 @@
 (function(cookieName, domain){
 
     var traffic_source_COOKIE_TOKEN_SEPARATOR = ">>"; //separating between concatenated lead source
-    var traffic_source_date_SEPARATOR = "|>"
+    var traffic_source_date_SEPARATOR = "|>";
     var NONE = "(none)";
 
     domain = domain || window.location.hostname;
