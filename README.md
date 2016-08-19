@@ -16,17 +16,17 @@ utm-alternative just got better!<br />
 <b>The new release is better adjusted for pure user tracking - regardless of using UTMZ cookie, or even Google Analytics.</b>
 
 <h2>Your Own User Tracking </h2>
-Since not all analytics platforms employ the utm_campaign query string paraemter, and since the auto-tagging of adwords enables you to omit it, one of the efficient way to track campaign is by using a new campaign query string paremeter: "src". Each time this parameter is declared in the URL, the utm-alternative code takes action.
+Since not all analytics platforms employ the utm_campaign query string paraemter, and since the auto-tagging of adwords enables you to omit it, this plugin creates and alternative - relying on your own cookie and a new parameter "src". Each time this parameter is declared in the URL, the utm-alternative code takes action.
 
 <h3>How Does the Script Work?</h3>
 
 1) First, checks whether there is an existing UTMZ cookie with a campaign info. If there is one, it saves it to the new cookie - "traffic_source". (This name can be changed to something else)
 
-2) If there is also a src query string parameter value (can be changed as well), it adds it to the cookie (=concatenate it), unless it already exists as the recent value. This way you can track your campaigns effect over time. You can also use the utm_campaign cookie easily since version 2.0.
+2) If there is also a src query string parameter value (can be changed as well), it adds it to the cookie (=concatenate it). This way you can track your campaigns effect over time. Since release 2.0 you can use the utm_campaign cookie as well more easily. 
 
-3) If there is neither, the script looks at the HTTP referrer, It will add the exact referring path (www.example.com/page.html, google.co.uk...)
+3) If there is neither, the script looks at the referrer. It will add the exact referring path (www.example.com/page.html, google.co.uk...)
 
-4) Otherwise, put "direct or none"" (strictly speaking, we cannot know for sure it's direct" traffic, or favorite, email, pdf or whatever). 
+4) Otherwise, it will put "direct or none"" (strictly speaking, we cannot know for sure it's direct traffic, or a browser favorite, email link, pdf or whatever). 
 
 An example of how the traffic source value should look like: 
 <pre>
