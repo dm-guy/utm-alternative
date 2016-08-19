@@ -1,10 +1,16 @@
 <script>
 (function(cookieName, domain){
 
-	var traffic_source_COOKIE_TOKEN_SEPARATOR = ">>"; //separating between concatenated traffic source
+/* Getting started:
+* Change the site_hostname from "subdomain.domain.com" to your own website
+* Change .YOUR-DOMAIN-HERE.com" at the bottom of the script.
+* Other settings are optional - you are good to go!
+*/
+
+	var traffic_source_COOKIE_TOKEN_SEPARATOR = ">>"; //separating between traffic source values. 
 	var site_hostname = "subdomain.domain.com"; //enter here your site. This will stop the script from populating with internal navigation
 	var tracking_parameter = "src" //you can put here "utm_campaign" if you rather use your existing tagging, or any other query string parameter name. How to deal with Adwords auto-tagging without utm_campaign value? Check the documentation. 
-	
+
 	/**
 	 * Checks if the referrer is a real referrer and not navigation through the same (sub)domain
 	 * @return true/false
@@ -80,7 +86,7 @@
     }
 	
 	
-	
+
 	if (isRealReferrer()) { //if the last page was not the page of the website/domain...
 	
 		//Variables that will be used by both cases - A & B
