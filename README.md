@@ -10,10 +10,6 @@ utm-alternative just got better!<br />
 -Less code and cleaner, easier to customize (but will work absolutely fine out of the box)<br />
 -Adding the timestamp of the session was <b>removed</b> from 2.0. Will be added in the future. <br />
 
-*now populates the cookie each visit
-
-*less code and cleaner, easier to customize (but will work fine out of the box)
-
 <i>Note that you can migrate easily as long as you keep the YOURDOMAIN.com value the same. For the documentation of version 1.1, see readme 1.1</i>
 
 <h2>The SRC value</h2>
