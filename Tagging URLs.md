@@ -37,6 +37,7 @@ The plugin can be also used to track navigation inside the site. What you have t
 <h2>Adjust Google Analytics and Webmastertools</h2>
 You might finds that adding a query string parameter makes the Google Analytics a bit dirty. Also, if you use external links to use your custom parameters, Google might think this parameter is a part of the page's url.
 To tackle those issues: <br />
-1. Make a new "view" on Google Analytics, and under "settings", add "src" (or your renamed parameter) under <i>Exclude URL Query Parameters </i>. I suggest to do it on a new View and not on existing view - always better to have a view with raw data - it will also help you to analyze your campaigns better. 
 
-2.  In Google Webmstertools, go to Crawl-->URL Parameters-->Add parameter. (From my experience, google doesn't always follow this directive, and the tracking parameter still appeared on search results. Make your own tests to be sure). 
+In Google Analytics - Make a new "view" on Google Analytics, and under "settings", add "src" (or your renamed parameter) under <i>Exclude URL Query Parameters </i>. I suggest to do it on a new View and not on existing view - always better to have a view with raw data - it will also help you to analyze your campaigns better. 
+
+In Google's Search Console, go to Crawl-->URL Parameters-->Add parameter. There you can add the "src" paramter so google will ignore it. From my experience, google doesn't always follow this directive, and the tracking parameter still appeared on search results. Make your own tests to be sure.
