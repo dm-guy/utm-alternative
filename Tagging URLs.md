@@ -8,7 +8,7 @@ If you want to add to the campaign id of Adwords, you can use: <pre>{lpurl}?src=
 You can find all the parameters of adwords here: https://support.google.com/adwords/answer/2375447?hl=en
 
 <h3>Adwords Auto-tagging</h3>
-If you use the utm_alternative (version 2.0) using the utm_campaign as the tracking parameter, you might encounter difficulties with adwords autotagging, which omits the utm_campaign and does everything for you very conventiently. If you want to keep on using utm_alternative, while keep using Adwords' autotagging, the best way is to can adjust utm-alternative in such a way that it will always take the utm_campaign, unless there is a custom parameter in the url as well. 
+If you use the utm_alternative (version 2.0) using "utm_campaign" as the tracking parameter, you might encounter difficulties with adwords autotagging, which omits the utm_campaign and does everything for you very conventiently. If you want to keep on using utm_alternative, while keep using Adwords' autotagging, the best way is to adjust utm-alternative in such a way that it will always take the utm_campaign, <b>unless</b> there is a custom parameter in the url as well. In other words, keep all your campaigns using the utm_campaign, but for the adwords campaigns you can add the "src" custom parameter (or any other) to popular the new traffic_source cookie. 
 
 To do so, replace the following line: 
 
@@ -23,7 +23,7 @@ if  (isNotNullOrEmpty(getURLParameter(tracking_parameter))) {
 		}
 </pre>
 
-Now, just add to your adwords campaign the "src" query string parameter (or any other parameter based on your settings). Again, with Upgraded URLs and Adwords Editor, this job is very easy to do. 
+Again, with Upgraded URLs and Adwords Editor, the approach described above is very easy to execute. 
 
 <h2>Linkedin and others</h2>
 With linkedin and other platform, you will have to tag your target URLs manually, therefore you can easily add the src parameter in the following way:<pre>www.example.com/?utm_source=Linkedin&utm_medium=cpc&utm_content=XXX&utm_campaign=YOURCAMPAIGN&src=YOURCAMPAIGN</pre>
@@ -33,3 +33,10 @@ You can always see which ads generated conversions on google analytics, but in s
 
 <h2>Navigation inside the site</h2>
 The plugin can be also used to track navigation inside the site. What you have to do is to add src parameter to your own internal links. Important note: if you do that, remember to tell search engines that this parameter does not affect page content. Otherwise, search engines will show your website urls with the src in it - this will mess up your tracking completely. In Google Webmstertools, go to Crawl-->URL Parameters-->Add parameter. (From my experience, google doesn't always follow this directive, and the tracking parameter still appeared on search results. Make your own tests to be sure). 
+
+<h2>Adjust Google Analytics and Webmastertools</h2>
+You might finds that adding a query string parameter makes the Google Analytics a bit dirty. Also, if you use external links to use your custom parameters, Google might think this parameter is a part of the page's url.
+To tackle those issues: <br />
+1. Make a new "view" on Google Analytics, and under "settings", add "src" (or your renamed parameter) under <i>Exclude URL Query Parameters </i>. I suggest to do it on a new View and not on existing view - always better to have a view with raw data - it will also help you to analyze your campaigns better. 
+
+2.  In Google Webmstertools, go to Crawl-->URL Parameters-->Add parameter. (From my experience, google doesn't always follow this directive, and the tracking parameter still appeared on search results. Make your own tests to be sure). 
