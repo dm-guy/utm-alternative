@@ -34,8 +34,8 @@ An example of how the traffic source value should look like:
 
 <h3>Installation</h3>
 
-*fill in your site in the variable "site_hostname" at the top of the code. 
-*Pass your domain name (in the format: .YOURDOMAIN.com) in the closure of the function. You can also change the default cookie name "traffic_source" to something else if you would like to. 
+*fill in your site in the variable "site_hostname" at the top of the code. <br />
+*Pass your domain name (in the format: .YOURDOMAIN.com) in the closure of the function. You can also change the default cookie name "traffic_source" to something else if you would like to. <br />
 
 
 Loading the Javascript:
