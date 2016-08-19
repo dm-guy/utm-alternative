@@ -8,7 +8,7 @@ This project aim is to provide the ability to use campaign data values inside th
 *now populates the cookie each visit
 *less code and cleaner, easier to customize (but will work fine out of the box)
 
-For the documentation of version 1.1, see readme 1.1
+<i>Note that you can migrate easily as long as you keep the YOURDOMAIN.com value the same. For the documentation of version 1.1, see readme 1.1</i>
 
 <h2>The SRC value</h2>
 Since not all analytics platforms employ the utm_campaign query string paraemter, and since the auto-tagging of adwords enables you to omit it, one of the efficient way to track campaign is by using a new campaign query string paremeter: "src". Each time this parameter is declared in the URL, the utm-alternative code takes action.
@@ -68,8 +68,11 @@ This project is completely functional and working. However, it needs more use ca
 <h6>Updates</h6>
 
 AUG 19 2016<br />
-Release 2.0! Thanks bobbylechuga and svensson-david for additions and inspiration. 
--adding the timestamp of the session is removed from 2.0. Will be added in the future. 
+<b>Release 2.0:</b> Thanks bobbylechuga and svensson-david for additions and inspiration. 
+-adding the timestamp of the session was <b>removed</b> from 2.0. Will be added in the future. 
+-Support using utm_campaign tags as requested 
+-Now populates the cookie on each visit
+-Less code and cleaner, easier to customize (but will work absolutely fine out of the box)
 
 AUG 07 2015<br />
 Added notes for implementation "Tagging URLs.md"
