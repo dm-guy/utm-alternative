@@ -70,11 +70,11 @@ This project is completely functional and working. However, it needs more use ca
 <h6>Updates</h6>
 
 AUG 19 2016<br />
-<b>Release 2.0:</b> Thanks bobbylechuga and svensson-david for additions and inspiration. 
--adding the timestamp of the session was <b>removed</b> from 2.0. Will be added in the future. 
--Support using utm_campaign tags as requested 
--Now populates the cookie on each visit
--Less code and cleaner, easier to customize (but will work absolutely fine out of the box)
+<b>Release 2.0:</b> Thanks bobbylechuga and svensson-david for additions and inspiration.<br /> 
+-Support using utm_campaign tags as requested <br />
+-Now populates the cookie on each visit<br />
+-Less code and cleaner, easier to customize (but will work absolutely fine out of the box)<br />
+-Adding the timestamp of the session was <b>removed</b> from 2.0. Will be added in the future. <br />
 
 AUG 07 2015<br />
 Added notes for implementation "Tagging URLs.md"
