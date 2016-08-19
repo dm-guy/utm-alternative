@@ -8,7 +8,7 @@ utm-alternative just got better!<br />
 -Support using utm_campaign tags as requested <br />
 -Now populates the cookie on each visit<br />
 -Less code and cleaner, easier to customize (but will work absolutely fine out of the box)<br />
--adding the timestamp of the session was <b>removed</b> from 2.0. Will be added in the future. <br />
+-Adding the timestamp of the session was <b>removed</b> from 2.0. Will be added in the future. <br />
 
 *now populates the cookie each visit
 
