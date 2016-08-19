@@ -68,7 +68,7 @@ This project is completely functional and working. However, it needs more use ca
 <h6>Updates</h6>
 
 AUG 19 2016<br />
-Version 2.0 is out! Thanks bobbylechuga and svensson-david for additions and inspiration. 
+Release 2.0! Thanks bobbylechuga and svensson-david for additions and inspiration. 
 -adding the timestamp of the session is removed from 2.0. Will be added in the future. 
 
 AUG 07 2015<br />
