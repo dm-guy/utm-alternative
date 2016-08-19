@@ -15,7 +15,7 @@ utm-alternative just got better!<br />
 
 <b>The new release is better adjusted for pure user tracking - regardless of using UTMZ cookie, or even Google Analytics.</b>
 
-<h2>Use Your Unique Tracking</h2>
+<h2>Your Own User Tracking </h2>
 Since not all analytics platforms employ the utm_campaign query string paraemter, and since the auto-tagging of adwords enables you to omit it, one of the efficient way to track campaign is by using a new campaign query string paremeter: "src". Each time this parameter is declared in the URL, the utm-alternative code takes action.
 
 <h3>How Does the Script Work?</h3>
