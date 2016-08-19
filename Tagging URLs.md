@@ -7,6 +7,24 @@ If you want to add to the campaign id of Adwords, you can use: <pre>{lpurl}?src=
 
 You can find all the parameters of adwords here: https://support.google.com/adwords/answer/2375447?hl=en
 
+<h3>Adwords Auto-tagging</h3>
+If you use the utm_alternative (version 2.0) using the utm_campaign as the tracking parameter, you might encounter difficulties with adwords autotagging, which omits the utm_campaign and does everything for you very conventiently. If you want to keep on using utm_alternative, while keep using Adwords' autotagging, the best way is to can adjust utm-alternative in such a way that it will always take the utm_campaign, unless there is a custom parameter in the url as well. 
+
+To do so, replace the following line: 
+
+<pre>var urlParamSRC = getURLParameter(tracking_parameter); //get value of the query string parameter (if any)</pre>
+
+With:
+<pre>
+if  (isNotNullOrEmpty(getURLParameter(tracking_parameter))) {
+			var urlParamSRC = getURLParameter(tracking_parameter); //get value of traffic source query string parameter
+		} else {
+			var urlParamSRC = getURLParameter("utm_campaign"); //get value of utm_campaign query string parameter (if any)
+		}
+</pre>
+
+Now, just add to your adwords campaign the "src" query string parameter (or any other parameter based on your settings). Again, with Upgraded URLs and Adwords Editor, this job is very easy to do. 
+
 <h2>Linkedin and others</h2>
 With linkedin and other platform, you will have to tag your target URLs manually, therefore you can easily add the src parameter in the following way:<pre>www.example.com/?utm_source=Linkedin&utm_medium=cpc&utm_content=XXX&utm_campaign=YOURCAMPAIGN&src=YOURCAMPAIGN</pre>
 
