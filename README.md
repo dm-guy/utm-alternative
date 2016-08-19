@@ -9,10 +9,11 @@ utm-alternative just got better!<br />
 -Now populates the cookie on each visit<br />
 -Less code and cleaner, easier to customize (but will work absolutely fine out of the box)<br />
 -Adding the timestamp of the session was <b>removed</b> from 2.0. Will be added in the future. <br />
+-Support for Adwords auto-tagging - use the new parameter OR utm_campaign - see documentation under "tagging URLs". <br />
 
 <i>Note that you can migrate easily as long as you keep the YOURDOMAIN.com value the same. For the documentation of version 1.1, see readme 1.1.</i>
 
-<h2>The SRC value</h2>
+<h2>Use Your Unique Tracking</h2>
 Since not all analytics platforms employ the utm_campaign query string paraemter, and since the auto-tagging of adwords enables you to omit it, one of the efficient way to track campaign is by using a new campaign query string paremeter: "src". Each time this parameter is declared in the URL, the utm-alternative code takes action.
 
 <h3>How Does the Script Work?</h3>
@@ -75,6 +76,7 @@ AUG 19 2016<br />
 -Now populates the cookie on each visit<br />
 -Less code and cleaner, easier to customize (but will work absolutely fine out of the box)<br />
 -Adding the timestamp of the session was <b>removed</b> from 2.0. Will be added in the future. <br />
+-Support for Adwords auto-tagging - use the new parameter OR utm_campaign - see documentation under "tagging URLs".<br />
 
 AUG 07 2015<br />
 Added notes for implementation "Tagging URLs.md"
