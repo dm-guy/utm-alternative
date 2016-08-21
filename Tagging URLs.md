@@ -8,7 +8,7 @@ If you want to add to the campaign id of Adwords, you can use: <pre>{lpurl}?src=
 You can find all the parameters of adwords here: https://support.google.com/adwords/answer/2375447?hl=en
 
 <h3>Adwords Auto-tagging</h3>
-If you use the utm_alternative (version 2.0) using "utm_campaign" as the tracking parameter, you might encounter difficulties with adwords autotagging, which omits the utm_campaign and does everything for you very conventiently. If you want to keep on using utm_alternative, while keep using Adwords' autotagging, the best way is to adjust utm-alternative in such a way that it will always take the utm_campaign, <b>unless</b> there is a custom parameter in the url as well. In other words, keep all your campaigns using the utm_campaign, but for the adwords campaigns you can add the "src" custom parameter (or any other) to popular the new traffic_source cookie. 
+If you use the utm_alternative (version 2.0) <u>using "utm_campaign" as the tracking parameter</u>, you might encounter difficulties with adwords autotagging, which omits the utm_campaign and does everything for you very conveniently. If you want to keep on using utm_alternative with "utm_campaign", while keep using Adwords' autotagging, the best way is to adjust utm-alternative in such a way that it will always take the utm_campaign, <b>unless</b> there is a custom parameter in the url as well. In other words, keep all your campaigns using the utm_campaign, but for the adwords campaigns you can add the "src" custom parameter (or any other) to popular the new traffic_source cookie. 
 
 To do so, replace the following line: 
 
@@ -23,7 +23,7 @@ if  (isNotNullOrEmpty(getURLParameter(tracking_parameter))) {
 		}
 </pre>
 
-Again, with Upgraded URLs and Adwords Editor, the approach described above is very easy to execute. 
+<b>Again, from marketing point of view, using your parameter will allow you to use {keyword} parameter, which will be the most informative data for your tracking.</b> Again, with Upgraded URLs and Adwords Editor, it's very easy to do so. 
 
 <h2>Linkedin and others</h2>
 With linkedin and other platform, you will have to tag your target URLs manually, therefore you can easily add the src parameter in the following way:<pre>www.example.com/?utm_source=Linkedin&utm_medium=cpc&utm_content=XXX&utm_campaign=YOURCAMPAIGN&src=YOURCAMPAIGN</pre>
