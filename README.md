@@ -5,9 +5,9 @@ This project aim is to provide the ability to use campaign data values inside th
 
 <h2>Update: Release 2.0 is out!</h2>
 utm-alternative just got better!<br />
--Support using utm_campaign tag as requested <br />
--Now populates the cookie on each visit<br />
--Less code and cleaner, easier to customize (but will work absolutely fine out of the box)<br />
+-Supports using utm_campaign tag as requested by some users<br />
+-Now populates the cookie on each user's visit<br />
+-Less code, cleaner, easier to customize (but will work absolutely fine out of the box)<br />
 -Adding the timestamp of the session was <b>removed</b> from 2.0. Will be added in the future. <br />
 -Support for Adwords auto-tagging - use the new parameter OR utm_campaign - see documentation under "tagging URLs". <br />
 
