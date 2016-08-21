@@ -23,7 +23,7 @@ if  (isNotNullOrEmpty(getURLParameter(tracking_parameter))) {
 		}
 </pre>
 
-<b>Again, from marketing point of view, using your parameter will allow you to use {keyword} parameter, which will be the most informative data for your tracking.</b> Again, with Upgraded URLs and Adwords Editor, it's very easy to do so. 
+<b>Just to highlight what I mentioned above, from marketing point of view, using your own parameter will allow you to use {keyword} parameter, which will be the most informative data for your tracking.</b> So I don't think that sticking to the utm_campaign cookie with Adwords is smart. Again, with Upgraded URLs and Adwords Editor, it's very easy to use utm_alternative with your custom query string parameter. 
 
 <h2>Linkedin and others</h2>
 With linkedin and other platform, you will have to tag your target URLs manually, therefore you can easily add the src parameter in the following way:<pre>www.example.com/?utm_source=Linkedin&utm_medium=cpc&utm_content=XXX&utm_campaign=YOURCAMPAIGN&src=YOURCAMPAIGN</pre>
