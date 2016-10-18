@@ -3,7 +3,7 @@
 
 This project aim is to provide the ability to use campaign data values inside the DOM (such as in forms). Many of us in the past added campaign data to our CRM (such as Salesforce) with Google Analytics UTMZ cookies, but with the move to Universal Analytics (UA), it's not possible to retrieve UTMZ cookie values anymore, since Universal Analytics script does not store campaign data on a cookie. This project then 1) creates a new cookie, "traffic_source", which tracks the campaign data based on a  query string parameter 2) Stores the existing UTMZ campaign value of returning users so old campaign data won't be lost.
 
-<h2>Update: Release 2.0 is out!</h2>
+<h2>Update Aug 2016: Release 2.0 is out!</h2>
 utm-alternative just got better!<br />
 -Supports using utm_campaign tag as requested by some users<br />
 -Now populates the cookie on each user's visit<br />
