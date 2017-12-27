@@ -1,7 +1,7 @@
 <h1>utm-alternative</h1>
 
 
-This project's aim is to allow you to gather campaign information for each conversion outside Google Analytics (or others). It does so by creating a cookie that saves users campaigns referral information on a cookie. It does so by using the existing utm_campaign, or your own query string parameter.
+This project's aim is to allow you to gather campaign information for each conversion outside Google Analytics (or others). It does so by creating a cookie that saves users campaigns referral information on a cookie. It relies on existing utm_campaign, or your own query string parameter.
 
 <h3>Why was this project started to being with?</h3>
 Once on earth there were dinasaurs that used Google Analytics UTMZ cookie to store data in CRM (such as Salesforce). But with the move to Universal Analytics (UA), it was not possible to retrieve UTMZ cookie values anymore, since Universal Analytics script does not store campaign data on a cookie.
