@@ -63,6 +63,9 @@ This project is completely functional and working. However, it needs more use ca
 
 <h6>Updates</h6>
 
+AUG 19 2024<br />
+Code update, removed deprecated method (toGMTString) and added "Secure" to the cookie for HTTPS.
+
 AUG 19 2016<br />
 <b>Release 2.0:</b> Thanks bobbylechuga and svensson-david for additions and inspiration.<br /> 
 -Support using utm_campaign tags as requested <br />
