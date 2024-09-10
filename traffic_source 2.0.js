@@ -74,7 +74,7 @@
 	function setCookie(cookie, value){
         var expires = new Date();
         expires.setTime(expires.getTime() + 62208000000); //1000*60*60*24*30*24 (2 years)
-        document.cookie = cookie + "=" + value + "; expires=" + expires.toUTCString() + "; domain=" + domain + "; path=/ Secure";
+        document.cookie = cookie + "=" + value + "; expires=" + expires.toUTCString() + "; domain=" + domain + "; path=/; Secure";
     }
 
 	/**
